@@ -1,0 +1,62 @@
+:root {
+  --board: #1f4a3d;
+  --board-deep: #173a30;
+  --chalk: #f6f4ea;
+  --chalk-dim: #c9d6cf;
+  --accent: #f3a6b4;
+  --frame: #c79a63;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--board);
+  color: var(--chalk);
+  font-family: "Hiragino Maru Gothic ProN", "BIZ UDPGothic", "Yu Gothic UI", "Meiryo", sans-serif;
+  line-height: 1.9;
+  border: 10px solid var(--frame);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 2rem;
+  flex: 1;
+}
+.eyebrow { margin: 0; color: var(--chalk-dim); font-size: .9rem; letter-spacing: .12em; }
+h1 { margin: .4rem 0 1.2rem; font-size: clamp(2.4rem, 9vw, 4rem); line-height: 1.2; letter-spacing: .04em; text-wrap: balance; }
+h1 span { display: inline-block; font-size: .42em; letter-spacing: .08em; border-bottom: 4px solid var(--accent); padding-bottom: .2em; }
+h1.small { font-size: clamp(1.7rem, 6vw, 2.3rem); border-bottom: 4px solid var(--accent); display: inline-block; padding-bottom: .15em; }
+h2 { margin: 2.4rem 0 .5rem; font-size: 1.15rem; letter-spacing: .06em; color: var(--chalk); }
+p, li { color: var(--chalk-dim); }
+strong { color: var(--chalk); }
+.lead { font-size: 1.1rem; color: var(--chalk); }
+.date { font-size: .9rem; }
+ul { padding-left: 1.2rem; }
+li { margin: .4rem 0; }
+a { color: var(--chalk); text-underline-offset: .25em; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.button {
+  display: inline-block;
+  margin: 1rem 0 .5rem;
+  padding: .7rem 1.6rem;
+  background: var(--chalk);
+  color: var(--board-deep);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 999px;
+}
+.button:hover { background: var(--accent); color: var(--board-deep); }
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background: var(--board-deep);
+  font-size: .9rem;
+  color: var(--chalk-dim);
+}
